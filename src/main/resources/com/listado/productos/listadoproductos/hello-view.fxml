@@ -1,16 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.listado.productos.listadoproductos.HelloController">
+<VBox alignment="CENTER" prefHeight="389.0" prefWidth="352.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.listado.productos.listadoproductos.HelloController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+   <children>
+      <HBox alignment="CENTER" prefHeight="90.0" prefWidth="312.0" spacing="20.0">
+         <children>
+            <TextField alignment="CENTER" disable="true" prefHeight="40.0" prefWidth="40.0" promptText="ID" />
+            <TextField prefHeight="40.0" prefWidth="120.0" promptText="Nombre producto:" />
+            <TextField prefHeight="40.0" prefWidth="120.0" promptText="Precio: " />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="12.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Agregar" />
+            <Button disable="true" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Eliminar" />
+            <Button disable="true" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Modificar" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="12.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Guardar" />
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Cargar" />
+         </children>
+      </HBox>
+      <TableView prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn prefWidth="40.0" text="ID" />
+          <TableColumn prefWidth="80.0" text="Precio" />
+          <TableColumn prefWidth="120.0" text="Nombre producto" />
+        </columns>
+      </TableView>
+   </children>
 </VBox>
